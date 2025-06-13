@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system: colors, gradients, fonts, and theme transitions */
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #131b2c;
+
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    --primary: #1d4ed8;
+    --primary-foreground: #f8fafc;
+
+    --secondary: #f1f5f9;
+    --secondary-foreground: #0f172a;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #f8fafc;
+
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #1d4ed8;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: #ffffff;
+    --sidebar-foreground: #0f172a;
+    --sidebar-primary: #1d4ed8;
+    --sidebar-primary-foreground: #f8fafc;
+    --sidebar-accent: #f1f5f9;
+    --sidebar-accent-foreground: #0f172a;
+    --sidebar-border: #e2e8f0;
+    --sidebar-ring: #1d4ed8;
+  }
+
+  .dark {
+    --background-color: #2e2c2c;
+    --foreground: #ffffff;
+
+    --card: #000000;
+    --card-foreground: #ffffff;
+
+    --popover: #000000;
+    --popover-foreground: #ffffff;
+
+    --primary: #d71235;
+    --primary-foreground: #ffffff;
+
+    --secondary: #421754;
+    --secondary-foreground: #ffffff;
+
+    --muted: #390939;
+    --muted-foreground: #c8c8c8;
+
+    --accent: #800000;
+    --accent-foreground: #ffffff;
+
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+
+    --border: #421754;
+    --input: #390939;
+    --ring: #d71235;
+
+    --sidebar-background: #000000;
+    --sidebar-foreground: #ffffff;
+    --sidebar-primary: #d71235;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #390939;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #421754;
+    --sidebar-ring: #d71235;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition-property: background-color, color, border-color, fill, stroke;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+
+  body {
+    background-color: #e2e8f0;
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    scroll-behavior: smooth;
+    text-decoration-color: #000000;
+  }
+
+  .dark body {
+    background-color: #030b1e;
+  }
+}
+ .signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-container input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-container button {
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 15px;
+}
